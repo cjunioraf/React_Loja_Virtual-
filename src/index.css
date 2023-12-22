@@ -25,23 +25,6 @@ nav a:hover{
   padding: 20px;
 }
 
-.total button,
-.thanks button  
-{
-  background-color: orange; 
-  color: #fff;
-  border: none;
-  border-radius: 5px; 
-  padding: 10px 20px;
-  cursor: pointer;    
-} 
-
-.total button:hover, 
-.thanks button:hover
-{
-  background-color: rgb(167, 120, 33);  
-}
-
 .btt_finalizar{
   background-color: green; 
   color: #fff;

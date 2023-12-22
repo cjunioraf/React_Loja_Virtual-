@@ -1,5 +1,6 @@
 import CarrinhoItem from "../Components/CarrinhoItem"
 import FinalizarCompra from "../Components/FinalizarCompra";
+import TotalGeral from "../Components/TotalGeral";
 import style from "./Carrinho.module.css"
 
 const Carrinho = ({cartItems, onUpdateCart, onDeleteCart, setCartItems}) => {
@@ -16,7 +17,7 @@ const Carrinho = ({cartItems, onUpdateCart, onDeleteCart, setCartItems}) => {
   return (
     <div>
       <h1>Carrinho </h1>      
-      {cartItems.length = 0 ? (<p>Não há item no carrinho!</p>) : (
+      {cartItems.length == 0 ? (<p>Não há item no carrinho!</p>) : (
         <>
           {cartItems.map((item) => (
             // <div key={item.id}>
@@ -30,7 +31,8 @@ const Carrinho = ({cartItems, onUpdateCart, onDeleteCart, setCartItems}) => {
           ))}
           <div className={style.total}>
             {/* toFixed(2) corrige as casas decimais para 2*/}
-            <p>Total: ${totalGeral.toFixed(2)}</p>              
+            {/* <p>Total: ${totalGeral.toFixed(2)}</p>               */}
+            <TotalGeral items={cartItems}/>
             {/* <FinalizarCompra onFinalizar={onFinalizar} /> */}
             <FinalizarCompra cartItems={cartItems} setCartItems={setCartItems}/>
           </div>          

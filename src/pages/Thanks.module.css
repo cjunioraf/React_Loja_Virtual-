@@ -1,0 +1,15 @@
+.thanks button  
+{
+  background-color: orange; 
+  color: #fff;
+  border: none;
+  border-radius: 5px; 
+  padding: 10px 20px;
+  cursor: pointer;    
+} 
+
+.thanks button:hover
+{
+  background-color: rgb(167, 120, 33);  
+}
+
