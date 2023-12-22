@@ -1,0 +1,59 @@
+body{
+  font-family: "Arial";
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;  
+}
+
+nav{
+  background-color: #444444;  
+  color: #fff;
+  padding: 10px;
+}
+/* Links da nav bar */
+nav a{
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover{
+  color: orange;
+}
+
+.container{
+  padding: 20px;
+}
+
+.total button,
+.thanks button  
+{
+  background-color: orange; 
+  color: #fff;
+  border: none;
+  border-radius: 5px; 
+  padding: 10px 20px;
+  cursor: pointer;    
+} 
+
+.total button:hover, 
+.thanks button:hover
+{
+  background-color: rgb(167, 120, 33);  
+}
+
+.btt_finalizar{
+  background-color: green; 
+  color: #fff;
+  border: none;
+  border-radius: 5px; 
+  padding: 10px 20px;
+  cursor: pointer;  
+  font-size: 15px;
+}
+
+.btt_finalizar:hover{
+  background-color: rgb(31, 192, 31)
+}
+
+
