@@ -8,6 +8,7 @@ const Home = ({onAddToCar}) => {
   return (    
     <div>
         <h1>Catálogo de Produtos</h1>
+        
         <div className={style.products_Container}>
             {productsData.map((product) => (
                 <Product key={product.id} product={product} onAddToCar={onAddToCar} />

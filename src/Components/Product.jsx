@@ -17,9 +17,13 @@ const Product = ({product, onAddToCar}) => {
         
             <select onChange={(e) => setQuantity(parseInt(e.target.value))} >                
                 {/* criar um array de 1 a 10 para o usuário escolher a quantidade */}
-                {[...Array(10).keys()].map((x) => ( <option key={x + 1} value={x + 1}>{x + 1}</option>))}
+                {[...Array(10).keys()].map((x) => ( 
+                  <option key={x + 1} value={x + 1}>{x + 1}</option>
+                ))}
             </select>
+
             <button onClick={() => onAddToCar(product, quantity)}>Adicionar no carrinho</button>
+
         </div>
 
     </div>

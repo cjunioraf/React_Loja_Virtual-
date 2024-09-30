@@ -1,9 +1,10 @@
 import { Routes, Route, Link } from 'react-router-dom'
+import { useState } from 'react'
+
 import Home from './pages/Home'
 import Carrinho from './pages/Carrinho'
 import Thanks from './pages/Thanks'
-import { useState } from 'react'
-//
+
 import { ToastContainer, toast } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
 
@@ -31,18 +32,16 @@ function App() {
   } 
   //função que atualiza o DB
   const handleUpdateCart = (produtc, quantity) => {
-    setCartItems((prevItems) => {   
-      toast.info(`Quantidade do ${produtc.name} atualizada!`);
+    toast.info(`Quantidade do ${produtc.name} atualizada!`);
+    setCartItems((prevItems) => {         
       return prevItems.map((item) => item.id === produtc.id ? ({...item, quantity: +quantity}) : (item));
     })
   }
   //função para deletar
   const handleDeleteCart = (product) => {
-
-    console.log(product)
-
-    setCartItems((prevItems) => {
-      toast.error(`${product.name} removido com sucesso!`);
+    // console.log(product)
+    toast.error(`${product.name} removido com sucesso!`);
+    setCartItems((prevItems) => {      
       return prevItems.filter((item) => item.id !== product.id);
     })
   }
@@ -68,12 +67,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home onAddToCar={handleAddCart}/>} />
-          <Route path="/cart" element={<Carrinho cartItems={cartItems} 
-                                                 onUpdateCart={handleUpdateCart} 
-                                                 onDeleteCart={handleDeleteCart}
-                                                 //onFinalizar={handleFinalizaCompra}
-                                                 setCartItems={setCartItems}
-                                                 />}/>                                                  
+          <Route path="/cart" element={<Carrinho cartItems={cartItems} onUpdateCart={handleUpdateCart} onDeleteCart={handleDeleteCart} setCartItems={setCartItems}/>}/>                                                  
           <Route path="/thanks" element={<Thanks />} />
         </Routes>          
       </div>

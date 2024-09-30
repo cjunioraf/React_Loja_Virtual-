@@ -15,10 +15,7 @@ const FinalizarCompra = ({cartItems, setCartItems}) => {
         }  
     }  
 
-  return <button 
-            onClick={handleFinalizar} 
-            className='btt_finalizar'>Finalizar Compra
-        </button>
+  return <button onClick={handleFinalizar} className='btt_finalizar'>Finalizar Compra </button>
 
 }
 

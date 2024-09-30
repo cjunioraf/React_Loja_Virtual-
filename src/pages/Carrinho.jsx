@@ -16,7 +16,7 @@ const Carrinho = ({cartItems, onUpdateCart, onDeleteCart, setCartItems}) => {
 
   return (
     <div>
-      <h1>Carrinho </h1>      
+      <h1>Carrinho</h1>      
       {cartItems.length == 0 ? (<p>Não há item no carrinho!</p>) : (
         <>
           {cartItems.map((item) => (
@@ -24,14 +24,11 @@ const Carrinho = ({cartItems, onUpdateCart, onDeleteCart, setCartItems}) => {
             //   <h3 >Produto: {item.name}</h3>    
             //   <p>Quantidade: {item.quantity}</p>                    
             // </div>
-            <CarrinhoItem key={item.id} 
-                          item={item} 
-                          onUpdateCart={onUpdateCart} 
-                          onDeleteCart={onDeleteCart}/>
+            <CarrinhoItem key={item.id} item={item} onUpdateCart={onUpdateCart} onDeleteCart={onDeleteCart}/>
           ))}
           <div className={style.total}>
             {/* toFixed(2) corrige as casas decimais para 2*/}
-            {/* <p>Total: ${totalGeral.toFixed(2)}</p>               */}
+            {/* <p>Total: ${totalGeral.toFixed(2)}</p> */}
             <TotalGeral items={cartItems}/>
             {/* <FinalizarCompra onFinalizar={onFinalizar} /> */}
             <FinalizarCompra cartItems={cartItems} setCartItems={setCartItems}/>
